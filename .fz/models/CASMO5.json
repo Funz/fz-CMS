@@ -1,0 +1,21 @@
+{
+    "id": "CASMO5",
+    "varprefix": "$",
+    "formulaprefix": "@",
+    "delim": "()",
+    "commentline": "*",
+    "timeout": 21600,
+    "output": {
+        "normal_termination": "python://int('Normal Termination' in read(next(base_dir.glob('*.log')).name))",
+        "fatal_message": "python://' '.join((grep(r'\\[Fatal Error\\] in\\s+(.*\\S)', next(base_dir.glob('*.log')).name) or '').split()) or None",
+        "warnings": "python://grep(r'(\\d+)\\s+Warning\\(s\\)', next(base_dir.glob('*.log')).name) or 0",
+        "burnup": "python://grep(r'^ *\\d+ .*?(-?\\d+\\.\\d{3}) +(\\d+\\.\\d{5}) +(\\d+\\.\\d{5}) +(\\d+\\.\\d+) +(\\d+\\.\\d{3}) +(\\d+\\.\\d{3}) +(\\d+\\.\\d{3}) +(\\d+\\.\\d{3}) *$', next(base_dir.glob('*.log')).name, group=1, all=True)",
+        "kinf": "python://grep(r'^ *\\d+ .*?(-?\\d+\\.\\d{3}) +(\\d+\\.\\d{5}) +(\\d+\\.\\d{5}) +(\\d+\\.\\d+) +(\\d+\\.\\d{3}) +(\\d+\\.\\d{3}) +(\\d+\\.\\d{3}) +(\\d+\\.\\d{3}) *$', next(base_dir.glob('*.log')).name, group=2, all=True)",
+        "kinf_2g": "python://grep(r'^ *\\d+ .*?(-?\\d+\\.\\d{3}) +(\\d+\\.\\d{5}) +(\\d+\\.\\d{5}) +(\\d+\\.\\d+) +(\\d+\\.\\d{3}) +(\\d+\\.\\d{3}) +(\\d+\\.\\d{3}) +(\\d+\\.\\d{3}) *$', next(base_dir.glob('*.log')).name, group=3, all=True)",
+        "m2": "python://grep(r'^ *\\d+ .*?(-?\\d+\\.\\d{3}) +(\\d+\\.\\d{5}) +(\\d+\\.\\d{5}) +(\\d+\\.\\d+) +(\\d+\\.\\d{3}) +(\\d+\\.\\d{3}) +(\\d+\\.\\d{3}) +(\\d+\\.\\d{3}) *$', next(base_dir.glob('*.log')).name, group=4, all=True)",
+        "pin_peak": "python://grep(r'^ *\\d+ .*?(-?\\d+\\.\\d{3}) +(\\d+\\.\\d{5}) +(\\d+\\.\\d{5}) +(\\d+\\.\\d+) +(\\d+\\.\\d{3}) +(\\d+\\.\\d{3}) +(\\d+\\.\\d{3}) +(\\d+\\.\\d{3}) *$', next(base_dir.glob('*.log')).name, group=5, all=True)",
+        "u235_wt": "python://grep(r'^ *\\d+ .*?(-?\\d+\\.\\d{3}) +(\\d+\\.\\d{5}) +(\\d+\\.\\d{5}) +(\\d+\\.\\d+) +(\\d+\\.\\d{3}) +(\\d+\\.\\d{3}) +(\\d+\\.\\d{3}) +(\\d+\\.\\d{3}) *$', next(base_dir.glob('*.log')).name, group=6, all=True)",
+        "fiss_pu_wt": "python://grep(r'^ *\\d+ .*?(-?\\d+\\.\\d{3}) +(\\d+\\.\\d{5}) +(\\d+\\.\\d{5}) +(\\d+\\.\\d+) +(\\d+\\.\\d{3}) +(\\d+\\.\\d{3}) +(\\d+\\.\\d{3}) +(\\d+\\.\\d{3}) *$', next(base_dir.glob('*.log')).name, group=7, all=True)",
+        "tot_pu_wt": "python://grep(r'^ *\\d+ .*?(-?\\d+\\.\\d{3}) +(\\d+\\.\\d{5}) +(\\d+\\.\\d{5}) +(\\d+\\.\\d+) +(\\d+\\.\\d{3}) +(\\d+\\.\\d{3}) +(\\d+\\.\\d{3}) +(\\d+\\.\\d{3}) *$', next(base_dir.glob('*.log')).name, group=8, all=True)"
+    }
+}

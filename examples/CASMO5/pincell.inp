@@ -1,0 +1,10 @@
+* CASMO5 UO2 pin cell, parametrized for fz: variables with defaults, a formula, context lines (*@)
+*@ import math
+*@ def cell_radius(pitch): return round(pitch / math.sqrt(math.pi), 5)
+TTL * Pin cell $(enrichment~4.45) w/o, square pitch $(pitch~1.26) cm
+TFU=$(tfu~900) TMO=$(tmo~575) BOR=$(boron~800)
+FUE 1 10.45/$(enrichment~4.45)
+* last radius = radius of the cylindrical cell of same area as the square cell (not the pitch)
+PIC .4096 .4178 .4750 @(cell_radius($(pitch~1.26)))/'1' 'HEL' 'CAN' 'COO'
+STA
+END

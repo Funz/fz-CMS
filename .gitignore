@@ -1,0 +1,32 @@
+# CMS output files
+*.out
+*.log
+*.cax
+*.lib
+*.res
+*.sum
+PID
+
+# Results and temporary files
+results/
+results_*/
+*_results/
+*.html
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv
+
+# fz temporary files
+.fz/tmp/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# trimmed real outputs used by the tests
+!tests/fixtures/**/*.out
+!tests/fixtures/**/*.log

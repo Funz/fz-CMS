@@ -1,0 +1,50 @@
+
+
+   Code compiled with Intel ifort, version 19.1 update 3 Build Date 20200925
+
+1________________________________________________________________________________________________________________________
+ CMSLINK5    STUDSVIK CMS LIBRARY PROCESSOR FOR SIMULATE VERSION 1.23.00              CREATED    24/07/26  
+                                                                                    18:03:42    26/10/15      PAGE    1
+
+
+   This source code has included the following optional modules:
+   ____________________________________________________________________________
+      1 - User Input Case Matrix
+   ____________________________________________________________________________
+
+      --------------- LISTING OF INPUT CARDS - 288 COLUMNS ---------------
+
+ >>   'COM' hot 4-group library: fuel + radial / bottom / top reflectors /
+ >>   'NEW' 'pwr_hot.lib' /
+ >>   'GRP' 4 /
+ >>   'CAS' 'c5.pwru200c00.cax' /
+ >>   'CAS' 'c5.pwr_reflectors.cax' 'RADREF' 0 'RAD' /
+ >>   'CAS' 'c5.pwr_reflectors.cax' 'BOTREF' 0 'BOT' /
+ >>   'CAS' 'c5.pwr_reflectors.cax' 'TOPREF' 0 'TOP' /
+ >>   'STA' /
+ >>   'END' /
+      ------------------------------------------------------
+
+           
+ ************************************************************************************************************************
+ ************************************************************************************************************************
+ **********                                 CASMO SIM CARDS ARE NOT ALL EQUAL                                  **********
+ **********    First CAS card segname read is: "PWRU200C00"  Subsequent CAS card segname read is: "RADREF"     **********
+ ************************************************************************************************************************
+ ************************************************************************************************************************
+           
+1________________________________________________________________________________________________________________________
+ CMSLINK5    STUDSVIK CMS LIBRARY PROCESSOR FOR SIMULATE VERSION 1.23.00              CREATED    24/07/26  
+  GENERIC PWR MODEL - FUEL PWRU200C00 BASE AND BRANCHES PWRU200C00          (S3)    18:03:42    26/10/15      PAGE    2
+
+
+
+ S U M M A R Y   O F   N O T E S,  E R R O R S   A N D   W A R N I N G S                            
+
+ Label     Degree     Info  
+ -----     ------     ----  
+
+ SIMCRD    FATAL      CASMO SIM CARDS ARE NOT ALL EQUAL
+
+ CMSLINK5 RUN ABORTED
+jeu. 15 oct. 2026 18:03:43 CEST

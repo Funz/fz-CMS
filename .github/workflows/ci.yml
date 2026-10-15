@@ -1,0 +1,127 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Test Plugin Structure
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+    
+    - name: Install fz framework
+      run: |
+        pip install git+https://github.com/Funz/fz.git
+     
+    - name: Validate JSON files
+      run: |
+        echo "Validating model files..."
+        for f in .fz/models/*.json; do
+          echo "  Checking $f"
+          python -m json.tool "$f" > /dev/null
+        done
+        echo "Validating calculator config files..."
+        for f in .fz/calculators/*.json; do
+          echo "  Checking $f"
+          python -m json.tool "$f" > /dev/null
+        done
+    
+    - name: Check shell script syntax
+      run: |
+        echo "Checking shell scripts..."
+        for f in .fz/calculators/*.sh; do
+          echo "  Checking $f"
+          bash -n "$f"
+        done
+    
+    - name: Test fzi (parse variables)
+      run: |
+        python -c "
+        import fz
+        for path, model, var in [('examples/CASMO5/pincell.inp', 'CASMO5', 'enrichment'),
+                                 ('examples/SIMULATE5/quarter_core.inp', 'SIMULATE5', 'tin_c'),
+                                 ('examples/CMSLINK5/library.inp', 'CMSLINK5', 'groups')]:
+            variables = fz.fzi(path, model)
+            print(f'{model} variables found: {list(variables.keys())}')
+            assert var in variables, f'Variable {var} not found'
+        print('✓ fzi test passed')
+        "
+
+    - name: Test fzc (compile input)
+      run: |
+        python -c "
+        import fz
+        import tempfile
+        import os
+        with tempfile.TemporaryDirectory() as tmpdir:
+            fz.fzc('examples/CASMO5/pincell.inp', {'enrichment': 3.1, 'pitch': 1.3}, 'CASMO5', output_dir=tmpdir)
+            compiled = [os.path.join(r, f) for r, _, fs in os.walk(tmpdir) for f in fs if f == 'pincell.inp']
+            assert compiled, 'Compiled file not created'
+            content = open(compiled[0]).read()
+            assert '10.45/3.1' in content, 'Variable not substituted'
+            assert '0.73345' in content, 'Formula not evaluated'
+        print('✓ fzc test passed')
+        "
+
+    - name: Run plugin tests
+      run: |
+        python tests/test_plugin.py
+    
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Check shell scripts are executable
+      run: |
+        for f in .fz/calculators/*.sh; do
+          if [ ! -x "$f" ]; then
+            echo "Error: $f is not executable"
+            exit 1
+          fi
+        done
+
+  docs:
+    name: Check Documentation
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Check required documentation files
+      run: |
+        for f in README.md LICENSE; do
+          if [ ! -f "$f" ]; then
+            echo "Error: Missing $f"
+            exit 1
+          fi
+          echo "✓ $f exists"
+        done
+    
+    - name: Check example files
+      run: |
+        for f in examples/CASMO5/pincell.inp examples/SIMULATE5/quarter_core.inp examples/CMSLINK5/library.inp; do
+          if [ ! -f "$f" ]; then
+            echo "Error: Missing example input file $f"
+            exit 1
+          fi
+        done
+        echo "✓ Example files present"

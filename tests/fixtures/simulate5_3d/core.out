@@ -1,0 +1,97 @@
+ Case  1 Step  0 3D HFP depletion                                                                1029.39 ppm    0.000 GWd/MT  
+
+ Output Summary                                                            Reference State Point      0  Ref Exp     0.000
+                                                                          
+ Relative Power. . . . . . .PERCTP   100.0 %                               Core Average Exposure . . . . EBAR   0.000 GWd/MT
+ Relative Flow . . . . . .  PERCWT   100.0 %                               Cycle Exp.   0.0 EFPD     0.0 EFPH   0.000 GWd/MT
+ Thermal Power . . . . . . . . CTP  2799.9 MWt                             Depletion Step Length . . . . .  0.000E+00 Hours
+ Core Flow . . . . . . . . . . CWT  49568. T/hr    109.28 Mlb/hr           Depletion =  0.000 * (0.5 P-BOS + 0.5 P-EOS)
+ Bypass and  Water Rod Flow .. CWL    186. T/hr      0.41 Mlb/hr           Fission Product Option: Eq  Xe, (Dep Sm)
+       Baffle/Barrel Bypass Flow        0. T/hr      0.00 Mlb/hr           Buckling (2D-USED:3D-ACTUAL). .  9.069E-05  CM-2
+       Water Rod Flow  . . . .        186. T/hr      0.41 Mlb/hr           Search Eigenvalue . . . . . . .    1.00000
+ Inlet Subcooling (PRMEAS) .SUBCOL   80.55 kcal/kg 144.99 Btu/lb           Search for Boron Conc.
+ Inlet Enthalpy. . . . . . .HINLET  308.85 kcal/kg 555.93 Btu/lb           Peak Nodal Power (Location)     2.488 ( 8, 8, 8)
+ Temperatures: Inlet . . . .TINLET  564.82 K       557.00 F                Peak Pin Powers  (Location) [PINFILE integration]
+       Coolant Average . . .TMOAVE  582.41 K       588.67 F                  F-delta-H       1.857 ( 8, 8)      [Off]
+       Active Coolant Ave  .TCOAVE  582.42 K       588.68 F                  Max-Fxy         1.990 ( 8, 8, 1)   [Off]
+       Fuel    Average . . .TFUAVE  864.62 K      1096.65 F                  Max-3PIN        2.564 ( 8, 8, 8)   [Off]
+ Coolant Volume-Averaged . .TMOVOL  582.67 K       589.13 F                  Max-4PIN        2.569 ( 8, 8, 7)   [Off]
+ Core Exit Pressure  . . . . .  PR  155.13 bar     2250.0 PSIA             K-effective . . . . . . . . . . . . .  1.00001
+ Boron Conc. . . . . . . . . . BOR 1029.39 ppm                            
+ CRD Positions Withdrawn . .ICRINV   22500                                 Total Neutron Leakage . . . . . . . . .  0.022
+ Hydraulic Iterations                                                     
+ Axial Offset. . . . . . . . . A-O  -0.026                                
+
+ Case  1 Step  1 3D HFP depletion                                                                 820.48 ppm    2.000 GWd/MT  
+
+ Output Summary                                                            Reference State Point      0  Ref Exp     0.000
+                                                                          
+ Relative Power. . . . . . .PERCTP   100.0 %                               Core Average Exposure . . . . EBAR   2.000 GWd/MT
+ Relative Flow . . . . . .  PERCWT   100.0 %                               Cycle Exp.  51.9 EFPD  1244.9 EFPH   2.000 GWd/MT
+ Thermal Power . . . . . . . . CTP  2799.9 MWt                             Depletion Step Length . . . . .  1.245E+03 Hours
+ Core Flow . . . . . . . . . . CWT  49568. T/hr    109.28 Mlb/hr           Depletion =  2.000 * (0.5 P-BOS + 0.5 P-EOS)
+ Bypass and  Water Rod Flow .. CWL    184. T/hr      0.41 Mlb/hr           Fission Product Option: Eq  Xe, (Dep Sm)
+       Baffle/Barrel Bypass Flow        0. T/hr      0.00 Mlb/hr           Buckling (2D-USED:3D-ACTUAL). .  1.217E-04  CM-2
+       Water Rod Flow  . . . .        184. T/hr      0.41 Mlb/hr           Search Eigenvalue . . . . . . .    1.00000
+ Inlet Subcooling (PRMEAS) .SUBCOL   80.55 kcal/kg 144.99 Btu/lb           Search for Boron Conc.
+ Inlet Enthalpy. . . . . . .HINLET  308.85 kcal/kg 555.93 Btu/lb           Peak Nodal Power (Location)     1.765 ( 8, 8,12)
+ Temperatures: Inlet . . . .TINLET  564.82 K       557.00 F                Peak Pin Powers  (Location) [PINFILE integration]
+       Coolant Average . . .TMOAVE  582.41 K       588.68 F                  F-delta-H       1.576 ( 8, 8)      [Off]
+       Active Coolant Ave  .TCOAVE  582.42 K       588.68 F                  Max-Fxy         1.741 ( 8, 8, 1)   [Off]
+       Fuel    Average . . .TFUAVE  862.04 K      1092.00 F                  Max-3PIN        1.824 ( 8, 8,12)   [Off]
+ Coolant Volume-Averaged . .TMOVOL  582.91 K       589.56 F                  Max-4PIN        1.829 ( 8, 8,12)   [Off]
+ Core Exit Pressure  . . . . .  PR  155.13 bar     2250.0 PSIA             K-effective . . . . . . . . . . . . .  1.00000
+ Boron Conc. . . . . . . . . . BOR  820.48 ppm                            
+ CRD Positions Withdrawn . .ICRINV   22500                                 Total Neutron Leakage . . . . . . . . .  0.026
+ Hydraulic Iterations                                                     
+ Axial Offset. . . . . . . . . A-O  -0.016                                
+
+ Case  1 Step  2 3D HFP depletion                                                                 629.70 ppm    4.000 GWd/MT  
+
+ Output Summary                                                            Reference State Point      0  Ref Exp     0.000
+                                                                          
+ Relative Power. . . . . . .PERCTP   100.0 %                               Core Average Exposure . . . . EBAR   4.000 GWd/MT
+ Relative Flow . . . . . .  PERCWT   100.0 %                               Cycle Exp. 103.7 EFPD  2489.7 EFPH   4.000 GWd/MT
+ Thermal Power . . . . . . . . CTP  2799.9 MWt                             Depletion Step Length . . . . .  1.245E+03 Hours
+ Core Flow . . . . . . . . . . CWT  49568. T/hr    109.28 Mlb/hr           Depletion =  2.000 * (0.5 P-BOS + 0.5 P-EOS)
+ Bypass and  Water Rod Flow .. CWL    184. T/hr      0.41 Mlb/hr           Fission Product Option: Eq  Xe, (Dep Sm)
+       Baffle/Barrel Bypass Flow        0. T/hr      0.00 Mlb/hr           Buckling (2D-USED:3D-ACTUAL). .  1.380E-04  CM-2
+       Water Rod Flow  . . . .        184. T/hr      0.41 Mlb/hr           Search Eigenvalue . . . . . . .    1.00000
+ Inlet Subcooling (PRMEAS) .SUBCOL   80.55 kcal/kg 144.99 Btu/lb           Search for Boron Conc.
+ Inlet Enthalpy. . . . . . .HINLET  308.85 kcal/kg 555.93 Btu/lb           Peak Nodal Power (Location)     1.586 ( 8, 9, 5)
+ Temperatures: Inlet . . . .TINLET  564.82 K       557.00 F                Peak Pin Powers  (Location) [PINFILE integration]
+       Coolant Average . . .TMOAVE  582.42 K       588.68 F                  F-delta-H       1.448 ( 8, 8)      [Off]
+       Active Coolant Ave  .TCOAVE  582.42 K       588.69 F                  Max-Fxy         1.581 ( 8, 8,16)   [Off]
+       Fuel    Average . . .TFUAVE  858.38 K      1085.41 F                  Max-3PIN        1.641 ( 8,10, 5)   [Off]
+ Coolant Volume-Averaged . .TMOVOL  583.21 K       590.11 F                  Max-4PIN        1.650 ( 9, 9, 4)   [Off]
+ Core Exit Pressure  . . . . .  PR  155.13 bar     2250.0 PSIA             K-effective . . . . . . . . . . . . .  1.00000
+ Boron Conc. . . . . . . . . . BOR  629.70 ppm                            
+ CRD Positions Withdrawn . .ICRINV   22500                                 Total Neutron Leakage . . . . . . . . .  0.030
+ Hydraulic Iterations                                                     
+ Axial Offset. . . . . . . . . A-O  -0.039                                
+
+ Case  1 Step  3 3D HFP depletion                                                                 422.82 ppm    6.000 GWd/MT  
+
+ Output Summary                                                            Reference State Point      0  Ref Exp     0.000
+                                                                          
+ Relative Power. . . . . . .PERCTP   100.0 %                               Core Average Exposure . . . . EBAR   6.000 GWd/MT
+ Relative Flow . . . . . .  PERCWT   100.0 %                               Cycle Exp. 155.6 EFPD  3734.6 EFPH   6.000 GWd/MT
+ Thermal Power . . . . . . . . CTP  2799.9 MWt                             Depletion Step Length . . . . .  1.245E+03 Hours
+ Core Flow . . . . . . . . . . CWT  49568. T/hr    109.28 Mlb/hr           Depletion =  2.000 * (0.5 P-BOS + 0.5 P-EOS)
+ Bypass and  Water Rod Flow .. CWL    184. T/hr      0.41 Mlb/hr           Fission Product Option: Eq  Xe, (Dep Sm)
+       Baffle/Barrel Bypass Flow        0. T/hr      0.00 Mlb/hr           Buckling (2D-USED:3D-ACTUAL). .  1.585E-04  CM-2
+       Water Rod Flow  . . . .        184. T/hr      0.41 Mlb/hr           Search Eigenvalue . . . . . . .    1.00000
+ Inlet Subcooling (PRMEAS) .SUBCOL   80.55 kcal/kg 144.99 Btu/lb           Search for Boron Conc.
+ Inlet Enthalpy. . . . . . .HINLET  308.85 kcal/kg 555.93 Btu/lb           Peak Nodal Power (Location)     1.442 ( 8, 8,13)
+ Temperatures: Inlet . . . .TINLET  564.82 K       557.00 F                Peak Pin Powers  (Location) [PINFILE integration]
+       Coolant Average . . .TMOAVE  582.41 K       588.68 F                  F-delta-H       1.348 ( 8,10)      [Off]
+       Active Coolant Ave  .TCOAVE  582.42 K       588.68 F                  Max-Fxy         1.478 ( 8, 8,16)   [Off]
+       Fuel    Average . . .TFUAVE  854.71 K      1078.80 F                  Max-3PIN        1.492 ( 8, 8,13)   [Off]
+ Coolant Volume-Averaged . .TMOVOL  583.10 K       589.92 F                  Max-4PIN        1.504 (11, 8, 3)   [Off]
+ Core Exit Pressure  . . . . .  PR  155.13 bar     2250.0 PSIA             K-effective . . . . . . . . . . . . .  1.00000
+ Boron Conc. . . . . . . . . . BOR  422.82 ppm                            
+ CRD Positions Withdrawn . .ICRINV   22500                                 Total Neutron Leakage . . . . . . . . .  0.033
+ Hydraulic Iterations                                                     
+ Axial Offset. . . . . . . . . A-O  -0.019                                
+
+ SIMULATE5 Run Completed - Normal Termination

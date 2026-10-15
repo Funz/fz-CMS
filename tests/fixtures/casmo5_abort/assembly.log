@@ -1,0 +1,18 @@
+ [Fatal Error] in INPUT1          Power density < 0.05 W/gU and depletion > 0.0 MWd/KgU requested.
+ Fatal error above can be overridden by the input card: ERR  5 (not recommended).
+
+ Run Started     (Date,Time):  2026/10/15   18:03:33  
+ Run Aborted     (Date,Time):  2026/10/15   18:03:34  
+ Total Wall Time Used       :               00:00:01
+ Total CPU  Time Used       :               00:00:00   CPU Utilization:    0%
+
+ Files:
+ Input                      :  fix-c5-pde.inp
+ Output                     :  fix-c5-pde.out
+ Screen                     :  fix-c5-pde.log
+ Card Image                 :  fix-c5-pde.cax
+ *********************************
+ *        CASMO5 v3.10.00        *
+ *      U S E R  A B O R T       *
+ *********************************
+C-5 Abort

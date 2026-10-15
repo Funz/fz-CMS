@@ -1,0 +1,9 @@
+{
+    "uri": "sh://",
+    "n": 1,
+    "models": {
+        "CASMO5": "bash .fz/calculators/CASMO5.sh",
+        "SIMULATE5": "bash .fz/calculators/SIMULATE5.sh",
+        "CMSLINK5": "bash .fz/calculators/CMSLINK5.sh"
+    }
+}

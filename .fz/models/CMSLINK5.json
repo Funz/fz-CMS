@@ -1,0 +1,13 @@
+{
+    "id": "CMSLINK5",
+    "varprefix": "$",
+    "formulaprefix": "@",
+    "delim": "()",
+    "commentline": "'COM'",
+    "output": {
+        "normal_termination": "python://int('NORMAL TERMINATION' in read(next(base_dir.glob('*.out')).name) and 'RUN ABORTED' not in read(next(base_dir.glob('*.out')).name))",
+        "fatal_message": "python://' '.join((grep(r'^ *(\\S+ +FATAL .*\\S)', next(base_dir.glob('*.out')).name) or '').split()) or None",
+        "library": "python://grep(r'NEW LIBRARY \"([^\"]+)\" WAS WRITTEN', next(base_dir.glob('*.out')).name)",
+        "segments": "python://grep(r'COMPLETE PROCESSING S5 LIBRARY SEGMENT :\\s*(\\S+)', next(base_dir.glob('*.out')).name, all=True)"
+    }
+}

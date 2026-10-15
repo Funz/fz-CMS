@@ -1,0 +1,22 @@
+{
+    "id": "SIMULATE5",
+    "varprefix": "$",
+    "formulaprefix": "@",
+    "delim": "()",
+    "commentline": "'COM'",
+    "output": {
+        "normal_termination": "python://int('Normal Termination' in read(next(base_dir.glob('*.out')).name))",
+        "fatal_message": "python://' '.join((grep(r'^ *(\\S+ +\\d+ +FATAL .*\\S)', next(base_dir.glob('*.out')).name) or '').split()) or None",
+        "keff": "python://grep(r'K-effective \\. [. ]*\\s(-?\\d+\\.\\d+)', next(base_dir.glob('*.out')).name, all=True)",
+        "boron": "python://grep(r'Boron Conc\\. [. ]*BOR\\s+(-?\\d+\\.\\d+)', next(base_dir.glob('*.out')).name, all=True)",
+        "exposure": "python://grep(r'EBAR\\s+(-?\\d+\\.\\d+) GWd/MT', next(base_dir.glob('*.out')).name, all=True)",
+        "cycle_efpd": "python://grep(r'Cycle Exp\\.\\s+(-?\\d+\\.\\d+) EFPD', next(base_dir.glob('*.out')).name, all=True)",
+        "power_pct": "python://grep(r'Relative Power\\. [. ]*PERCTP\\s+(-?\\d+\\.\\d) %', next(base_dir.glob('*.out')).name, all=True)",
+        "peak_nodal_power": "python://grep(r'Peak Nodal Power \\(Location\\)\\s+(\\d+\\.\\d+)', next(base_dir.glob('*.out')).name, all=True)",
+        "fdh": "python://grep(r'F-delta-H\\s+(\\d+\\.\\d+)', next(base_dir.glob('*.out')).name, all=True)",
+        "max_fxy": "python://grep(r'Max-Fxy\\s+(\\d+\\.\\d+)', next(base_dir.glob('*.out')).name, all=True)",
+        "axial_offset": "python://grep(r'Axial Offset\\. [. ]*A-O\\s+(-?\\d+\\.\\d+)', next(base_dir.glob('*.out')).name, all=True)",
+        "leakage": "python://grep(r'Total Neutron Leakage[ .]*\\s(\\d+\\.\\d+)', next(base_dir.glob('*.out')).name, all=True)",
+        "tfu_avg": "python://grep(r'TFUAVE\\s+(\\d+\\.\\d+) K', next(base_dir.glob('*.out')).name, all=True)"
+    }
+}

@@ -1,0 +1,31 @@
+'COM' SIMULATE5 2D quarter core, critical boron search (library of the SIMULATE5 installation) /
+'COM'@ def degF(celsius): return round(celsius * 9 / 5 + 32, 2)
+'DIM.PWR' 15/
+'DIM.CAL' 1 'QUARTER' 2 2/
+'DIM.DEP' 'EXP' 'SAM' 'HTM' 'HBO' 'HTF' 'EBP' /
+'TIT.CAS' 'boron search, $(power~100) % power, inlet $(tin_c~291.7) C'/
+'COR.DAT' 21.50 365.76 105.48 683.0 /
+'COR.SYM' 'ROT'/
+'LIB' 'clnk.pwr.4grp.lib' /
+'REF.LIB' 1 'RADREF'/
+'SEG.LIB' 2 'PWRU250W16'/
+'SEG.LIB' 3 'PWRU320C00'/
+'FUE.ZON' 1 1 'REFL' 1 365.76/
+'FUE.ZON' 2 1 'U250W16' 2 365.76/
+'FUE.ZON' 3 1 'U320' 3 365.76/
+'FUE.TYP' 1
+ 2 3 2 3 2 3 2 3 1
+ 3 2 3 2 3 2 3 3 1
+ 2 3 2 3 2 3 3 1 1
+ 3 2 3 2 3 3 3 1 0
+ 2 3 2 3 3 3 1 1 0
+ 3 2 3 3 3 1 1 0 0
+ 2 3 3 3 1 1 0 0 0
+ 3 3 1 1 1 0 0 0 0
+ 1 1 1 0 0 0 0 0 0 /
+'COM' power and flow in %, pressure in psia, inlet temperature in degrees F /
+'COR.OPE' $(power~100) 100. 2250. /
+'COR.TIN' @(degF($(tin_c~291.7))) /
+'ITE.BOR' 1500 /
+'STA' /
+'END' /

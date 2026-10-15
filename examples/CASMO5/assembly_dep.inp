@@ -1,0 +1,22 @@
+* CASMO5 PWR 17x17 UO2 assembly depletion (octant symmetry)
+TTL * PWR 17x17 $(enrichment~3.7) w/o, $(boron~700) ppm, depletion to $(max_burnup~20) MWd/kg
+TFU=$(tfu~900) TMO=$(tmo~580) BOR=$(boron~700)
+PDE 104.5 'KWL'
+FUE 1 10.4/$(enrichment~3.7)
+PWR 17 1.26 21.5
+PIN 1 .4095 .418 .475
+PIN 2 .561 .602/'MOD' 'BOX'
+PIN 3 .561 .602/'MOD' 'BOX'
+LPI
+3
+1 1
+1 1 1
+2 1 1 2
+1 1 1 1 1
+1 1 1 1 1 2
+2 1 1 2 1 1 1
+1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+DEP -$(max_burnup~20)
+STA
+END

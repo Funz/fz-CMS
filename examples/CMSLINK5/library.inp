@@ -1,0 +1,12 @@
+'COM' CMSLINK5 library from the CASMO5 card image files of the CMSLINK5 installation /
+'NEW' '$(library~pwr_hot.lib)' /
+'GRP' $(groups~4) /
+'CAS' 'c5.pwru200c00.cax' /
+'STA' /
+'CAS' 'c5.pwr_reflectors.cax' 'RADREF' 0 'RAD' /
+'STA' /
+'CAS' 'c5.pwr_reflectors.cax' 'BOTREF' 0 'BOT' /
+'STA' /
+'CAS' 'c5.pwr_reflectors.cax' 'TOPREF' 0 'TOP' /
+'STA' /
+'END' /

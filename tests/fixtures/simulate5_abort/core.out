@@ -1,0 +1,4 @@
+ 0003        1   FATAL                 Cross section data absent from XS library: PWRU320C0
+ SEGMISS     1   FATAL      TABSIZ     Segments missing from XS library
+ ABORT       1   FATAL      EXITS      Segments missing from XS library --Is this the correct library?
+ THREADS     1   NOTE       SYSTEM     Maximum number of threads set by default to 2
